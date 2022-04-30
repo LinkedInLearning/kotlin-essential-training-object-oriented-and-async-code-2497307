@@ -1,9 +1,11 @@
 import kotlinx.coroutines.*
 
-private fun refreshTasks() {
+private suspend fun refreshTasks() {
+    delay(3000)
     println("Refreshing tasks on ${Thread.currentThread().name}")
 }
-private fun refreshReservations() {
+private suspend fun refreshReservations() {
+    delay(3000)
     println("Refreshing reservations on ${Thread.currentThread().name}")
 }
 private fun refreshUser() {
@@ -18,7 +20,19 @@ private fun cancelEverything(vararg jobs: Job) {
 }
 
 fun main(): Unit = runBlocking {
-    refreshTasks()
-    refreshReservations()
-    refreshUser()
+
+    val job2 = launch {
+        val tasks = async { refreshTasks() }
+        val reservations = async { refreshReservations() }
+
+        awaitAll(tasks, reservations)
+
+        withContext(this@runBlocking.coroutineContext) {
+            updateUI()
+        }
+    }
+
+    val job = launch { refreshUser() }
+
+    cancelEverything(job, job2)
 }
