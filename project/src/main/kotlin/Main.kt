@@ -1,10 +1,6 @@
 
 
 fun main() {
-//    val appLogger = ApplicationLogger(SimpleLogger())
-//    appLogger.log("example", appLogger)
-
-    val viewModel = ViewModel()
-    viewModel.search("Kotlin")
-    viewModel.search("Code")
+    ListUtils.nonEmptyList(arrayOf(1, 2, 3))
+    ListUtils.setToNonEmptyList(setOf("a", "b", "c"))
 }
