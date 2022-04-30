@@ -1,3 +1,4 @@
+import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
@@ -16,5 +17,10 @@ private suspend fun loadItemsFromNetwork(): List<String> {
 // Use await() to get results of both async() calls
 // Convert the results into a unified list and print out to the console
 fun main(): Unit = runBlocking {
+    val db = async { loadItemsFromDB() }
+    val network = async { loadItemsFromNetwork() }
 
+    val results = db.await() + network.await()
+
+    results.forEach { language -> println(language) }
 }
