@@ -5,7 +5,18 @@ import kotlin.random.Random
 // calling getString() should never crash
 // errors should be wrapped with StringResult.Failure
 fun main() {
+    when (val result = getString()) {
+        is StringResult.Error -> println("There was an error")
+        is StringResult.Success -> println(result.value)
+    }
+}
 
+fun getString(): StringResult {
+    return try {
+        StringResult.Success(getRandomString())
+    } catch (error: java.lang.IllegalStateException) {
+        StringResult.Error(error)
+    }
 }
 
 fun getRandomString(): String {
