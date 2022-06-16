@@ -1,7 +1,11 @@
-# Kotlin Essential Training: Object Oriented and Async Code
-This is the repository for the LinkedIn Learning course `Kotlin Essential Training: Object Oriented and Async Code`. The full course is available from [LinkedIn Learning][lil-course-url].
+# Kotlin Essential Training: Object-Oriented and Async Code
+This is the repository for the LinkedIn Learning course Kotlin Essential Training: Object-Oriented and Async Code. The full course is available from [LinkedIn Learning][lil-course-url].
 
-_See the readme file in the main branch for updated instructions and information._
+![Kotlin Essential Training: Object-Oriented and Async Code][lil-thumbnail-url] 
+
+If you’re looking to get up and running with Kotlin, the powerful programming language from JetBrains, join instructor Nate Ebel, the author of Mastering Kotlin, as he shows you the ins and out of Kotlin and walks you through its unique selling points for developers—from null safety and concise syntax to Java compatibility, to full support by Google for Android development.
+In this second installment of the two-apart Kotlin Essential Training series, Nate covers object-oriented programming and async code in Kotlin. He covers topics like classes, interfaces, companion objects, and coroutines. Nate also provides challenges so you can test your Kotlin knowledge as you go.
+
 ## Instructions
 This repository has branches for each of the videos in the course. You can use the branch pop up menu in github to switch to a specific branch and take a look at the course at that stage, or you can add `/tree/BRANCH_NAME` to the URL to go to the branch you want to access.
 
@@ -20,15 +24,16 @@ To resolve this issue:
     Add changes to git using this command: git add .
 	Commit changes using this command: git commit -m "some message"
 
-## Installing
-1. To use these exercise files, you must have the following installed:
-	- [list of requirements for course]
-2. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
-3. [Course-specific instructions]
+
+### Instructor
+
+Nate Ebel 
+                            
 
 
-[0]: # (Replace these placeholder URLs with actual course URLs)
+                            
 
-[lil-course-url]: https://www.linkedin.com/learning/
-[lil-thumbnail-url]: http://
+Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/nate-ebel).
 
+[lil-course-url]: https://www.linkedin.com/learning/kotlin-essential-training-object-oriented-and-async-code
+[lil-thumbnail-url]: https://cdn.lynda.com/course/2497307/2497307-1655231463826-16x9.jpg
